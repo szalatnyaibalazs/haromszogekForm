@@ -88,7 +88,7 @@
             // 
             // tbColdal
             // 
-            this.tbColdal.Location = new System.Drawing.Point(41, 143);
+            this.tbColdal.Location = new System.Drawing.Point(41, 95);
             this.tbColdal.Name = "tbColdal";
             this.tbColdal.Size = new System.Drawing.Size(100, 29);
             this.tbColdal.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             // tbBoldal
             // 
-            this.tbBoldal.Location = new System.Drawing.Point(40, 98);
+            this.tbBoldal.Location = new System.Drawing.Point(41, 138);
             this.tbBoldal.Name = "tbBoldal";
             this.tbBoldal.Size = new System.Drawing.Size(100, 29);
             this.tbBoldal.TabIndex = 6;
@@ -139,8 +139,9 @@
             // 
             // lbHaromszogLista
             // 
+            this.lbHaromszogLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbHaromszogLista.FormattingEnabled = true;
-            this.lbHaromszogLista.ItemHeight = 24;
+            this.lbHaromszogLista.ItemHeight = 16;
             this.lbHaromszogLista.Location = new System.Drawing.Point(411, 143);
             this.lbHaromszogLista.Name = "lbHaromszogLista";
             this.lbHaromszogLista.Size = new System.Drawing.Size(246, 244);

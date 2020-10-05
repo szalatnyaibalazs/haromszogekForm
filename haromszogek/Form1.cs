@@ -12,9 +12,9 @@ namespace haromszogek
 {
     public partial class frmFo : Form
     {
-        private int aOldal;
-        private int bOldal;
-        private int cOldal;
+        private double aOldal;
+        private double bOldal;
+        private double cOldal;
         public frmFo()
         {
             aOldal = 0;
@@ -41,24 +41,33 @@ namespace haromszogek
 
         private void btnSzamol_Click(object sender, EventArgs e)
         {
-            aOldal = int.Parse(tbAoldal.Text);
-            bOldal = int.Parse(tbBoldal.Text);
-            cOldal = int.Parse(tbColdal.Text);
+            try
+            {
+                aOldal = double.Parse(tbAoldal.Text);
+                bOldal = double.Parse(tbBoldal.Text);
+                cOldal = double.Parse(tbColdal.Text);
 
-            if (aOldal == 0 || bOldal==0 || cOldal==0)
-            {
-                MessageBox.Show("Nem lehet 0 a háromszög oldala","Figyelmeztetés",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            else
-            {
-                var h = new Haromszog(aOldal,bOldal,cOldal);
-                List<string> adatok = h.AdatokSzoveg();
-                foreach (var a in adatok)
+                if (aOldal == 0 || bOldal == 0 || cOldal == 0)
                 {
-                    lbHaromszogLista.Items.Add(a);
+                    MessageBox.Show("Nem lehet 0 a háromszög oldala", "Figyelmeztetés", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    var h = new Haromszog(aOldal, bOldal, cOldal);
+                    List<string> adatok = h.AdatokSzoveg();
+                    foreach (var a in adatok)
+                    {
+                        lbHaromszogLista.Items.Add(a);
+                    }
 
 
+                }
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show("Számot adj meg!","Hiba",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                tbAoldal.Focus();
             }
             
 
